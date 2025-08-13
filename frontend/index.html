@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda de Contatos</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Agenda de Contatos</h1>
+
+    <!-- Formulário de Cadastro -->
+    <form id="form-filme">
+      <input type="text" id="titulo" placeholder="Barbie" required />
+      <input type="number" id="duracao" placeholder="120 (em minutos)" />
+      <select id="genero">
+		<option value="Terror">Terror</option>
+		<option value="Romance">Romance</option>
+		<option value="Fantasia">Fantasia</option>
+		<option value="Ficção">Ficção</option>
+		<option value="Animação">Animação</option>
+	  </select>
+	  <textarea rows="20" cols="80" id='sinopse'></textarea>
+      <button type="submit">Salvar</button>
+    </form>
+	git commit -m 'mensagem'
+    <!-- Tabela de Listagem -->
+    <table>
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Duração</th>
+          <th>Gênero</th>
+          <th>Sinopse</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-filme">
+        <!-- Linhas serão inseridas via JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./js/main.js"></script> <!-- Será feito na Parte 5 -->
+</body>
+</html>

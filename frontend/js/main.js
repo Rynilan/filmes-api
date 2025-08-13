@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://zuckemberg-silva.onrender.com/api';
+const API_BASE_URL = 'https://filmes-api-x66u.onrender.com/api';
 
 const form = document.getElementById('form-filme');
 const tabela = document.getElementById('tabela-filme');
@@ -74,7 +74,7 @@ form.addEventListener('submit', async (e) => {
     alert(idEditando ? 'Filme atualizado!' : 'Filme criado!');
     idEditando = null;
     form.reset();
-    carregarContatos();
+    carregarFilmes();
 
   } catch (error) {
     alert('Erro ao salvar filme: ' + error.message);

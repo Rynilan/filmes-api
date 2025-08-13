@@ -1,45 +1,45 @@
 const Filme = require('../models/filmeModel');
 
-// Criar novo contato
+// Criar novo filme
 const criarFilme = async (req, res) => {
   try {
     const novoFilme = new Filme(req.body);
     await novoFilme.save();
     res.status(201).json(novoFilme);
   } catch (error) {
-    res.status(400).json({ mensagem: 'Erro ao criar contato', erro: error.message });
+    res.status(400).json({ mensagem: 'Erro ao criar filme', erro: error.message });
   }
 };
 
-// Listar todos os contatos
+// Listar todos os filme
 const listarFilmes = async (req, res) => {
   try {
-    const contatos = await Filme.find();
-    res.status(200).json(contatos);
+    const filmes = await Filme.find();
+    res.status(200).json(filmes);
   } catch (error) {
-    res.status(500).json({ mensagem: 'Erro ao listar contatos', erro: error.message });
+    res.status(500).json({ mensagem: 'Erro ao listar filmes', erro: error.message });
   }
 };
 
-// Atualizar contato por ID
+// Atualizar filme por ID
 const atualizarFilme = async (req, res) => {
   try {
-    const contatoAtualizado = await Filme.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!contatoAtualizado) return res.status(404).json({ mensagem: 'Filme não encontrado' });
-    res.status(200).json(contatoAtualizado);
+    const filmeAtualizado = await Filme.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!filmeAtualizado) return res.status(404).json({ mensagem: 'Filme não encontrado' });
+    res.status(200).json(filmeAtualizado);
   } catch (error) {
-    res.status(400).json({ mensagem: 'Erro ao atualizar contato', erro: error.message });
+    res.status(400).json({ mensagem: 'Erro ao atualizar filme', erro: error.message });
   }
 };
 
-// Excluir contato por ID
+// Excluir filme por ID
 const deletarFilme = async (req, res) => {
   try {
-    const contatoExcluido = await Filme.findByIdAndDelete(req.params.id);
-    if (!contatoExcluido) return res.status(404).json({ mensagem: 'Filme não encontrado' });
+    const filmeExcluido = await Filme.findByIdAndDelete(req.params.id);
+    if (!filmeExcluido) return res.status(404).json({ mensagem: 'Filme não encontrado' });
     res.status(200).json({ mensagem: 'Filme excluído com sucesso' });
   } catch (error) {
-    res.status(400).json({ mensagem: 'Erro ao excluir contato', erro: error.message });
+    res.status(400).json({ mensagem: 'Erro ao excluir filme', erro: error.message });
   }
 };
 

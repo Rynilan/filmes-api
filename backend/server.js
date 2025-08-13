@@ -7,11 +7,10 @@ const app = express();
 
 const cors = require('cors');
 app.use(cors({
-  origin: ['https://zuckemberg-silva.onrender.com', 'https://zuckemberg-silva.vercel.app'], // Alterar depois de criado o servidor e vercel.
+  origin: ['https://filmes-api-x66u.onrender.com', 'https://zuckemberg-silva.vercel.app'], // Alterar depois de criado o servidor e vercel.
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
-
 // Middleware
 app.use(cors());
 app.use(express.json());

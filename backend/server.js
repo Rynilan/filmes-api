@@ -7,7 +7,7 @@ const app = express();
 
 const cors = require('cors');
 app.use(cors({
-  origin: ['https://filmes-api-x66u.onrender.com', 'https://zuckemberg-silva.vercel.app'], // Alterar depois de criado o servidor e vercel.
+  origin: ['https://filmes-api-x66u.onrender.com', 'https://filmes-api-black.vercel.app/'], // Alterar depois de criado o servidor e vercel.
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -37,4 +37,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
 });
+
 
